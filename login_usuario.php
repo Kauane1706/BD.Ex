@@ -13,7 +13,7 @@ include 'conexao.php';
 <body>
     
     <h2>Login</h2>
-    <form action="verifica_login" method="POST">
+    <form action="verifica_login.php" method="POST">
         <label for="email">Email:</label><br>
         <input type="email" id="email_usuario" name="email_usuario" placeholder="Digite seu email" required><br><br>
         
@@ -22,6 +22,6 @@ include 'conexao.php';
         
         <button type="submit">Entrar</button>
     </form>
-    
+
 </body>
 </html>
