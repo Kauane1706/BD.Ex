@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212; /* Fundo preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: #f2f2f2; /* Cinza claro, mas não muito claro */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c2c2c; /* Cinza escuro */
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #3d3d3d; /* Cinza médio */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b0b0b0; /* Cinza neutro */
+    border-radius: 8px;
+    font-size: 14px;
+    background: #e8e8e8; /* Fundo cinza claro */
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6c6c6c; /* Cinza mais escuro */
+    background: #dcdcdc; /* Fundo mais escuro ao focar */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #6c6c6c; /* Cinza escuro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #4a4a4a; /* Cinza ainda mais escuro */
+}
+
+.error-message {
+    color: #d9534f; /* Vermelho suave para mensagens de erro */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Adicionando uma box para informações do usuário */
+.user-box {
+    background: #2c2c2c; /* Preto */
+    border: 1px solid #6a0dad; /* Roxo */
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(106, 13, 173, 0.5); /* Sombra roxa ao redor */
+    width: 80%; /* Tornando a box maior */
+    max-width: 600px; /* Limitando o tamanho máximo */
+    color: white; /* Texto branco para contraste */
+    text-align: center; /* Centralizando o texto */
+}
+
+/* Estilo do título dentro da box */
+.user-box h3 {
+    font-size: 24px;
+    color: #6a0dad; /* Roxo */
+    margin-bottom: 20px;
+}
+
+/* Estilo dos parágrafos dentro da box */
+.user-box p {
+    font-size: 16px;
+    color: #e0e0e0; /* Cinza claro para contraste */
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Estilo das informações do usuário */
+.user-box .user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.user-box .user-info span {
+    font-weight: 500;
+    color: #6a0dad; /* Roxo */
+}
+
+/* Estilo para a mensagem no topo da página */
+.top-message {
+    position: fixed; /* Fixado no topo da página */
+    top: 10px; /* Distância do topo */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralizar */
+    font-size: 18px; /* Tamanho da fonte */
+    color: white; /* Letras em branco */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Centralização do texto */
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
+}
+
+
+

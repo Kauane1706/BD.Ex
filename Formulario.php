@@ -9,12 +9,15 @@ include 'conexao.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<div class="top-message">Conectado ao banco de dados</div>
+  <div class="user-box">
   <h2>Cadastro de Usuário</h2>
-  <form action="cadastrar.php" method="POST">
+  <form action="cadastro.php" method="POST">
     <LABEL FOR="nome_usuario">Nome:</label><br>
-    <input type="text" id="name_usuario" name="nome_usuario" required><br><br>
+    <input type="text" id="nome_usuario" name="nome_usuario" required><br><br>
     
     <label for="contato_usuario">Contato:</label><br>
     <input type="text" id="contato_usuario" name="contato_usuario" required><br><br>
@@ -27,5 +30,6 @@ include 'conexao.php';
 
     <button type="submit">Cadastrar</button>
     </form>
+</div>
 </body>
 </html>

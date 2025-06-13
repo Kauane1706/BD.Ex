@@ -4,22 +4,22 @@ include 'conexao.php';
 
     //verificando se o formulário foi enviado
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $NOME_USUARIO = $_POST['nome_usuario'];
-        $CONTATO_USUARIO = $_POST['contato_usuario'];
-        $EMAIL_USUARIO = $_POST['email_usuario'];
-        $SENHA_USUARIO = $_POST['senha_usuario'];
+        $nome_usuario = $_POST['nome_usuario'];
+        $contato_usuario = $_POST['contato_usuario'];
+        $email_usuario = $_POST['email_usuario'];
+        $senha_usuario = $_POST['senha_usuario'];
 
-        $senha_hash = password_hash($SENHA_USUARIO, PASSWORD_DEFAULT);
+        $senha_hash = password_hash($senha_usuario, PASSWORD_DEFAULT);
 
         //Preparando a consulta SDQL para inserir os dados
 
-        $sql = "INSERT INTO usuarios (nome_usuario, contato_usuario, email_usuario, senha_usuario) 
+        $sql = "INSERT INTO cadastro (nome_usuario, contato_usuario, email_usuario, senha_usuario) 
                 VALUES (?, ?, ?, ?)";
     } 
        //Preparando a declaração
     if ($stmt = $mysqli->prepare($sql)) {
         //Bind os parâmetros da consulta
-        $stmt->bind_param("ssss", $NOME_USUARIO, $CONTATO_USUARIO, $EMAIL_USUARIO, $senha_hash);
+        $stmt->bind_param("ssss", $nome_usuario, $contato_usuario, $email_usuario, $senha_hash);
         
         // Executando a consulta
         if ($stmt->execute()) {
