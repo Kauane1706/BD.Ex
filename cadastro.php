@@ -41,7 +41,11 @@ include 'conexao.php';
             window.location.href='login_usuario.php';
         </script>";
     } else{
-        $mensagem = "<div class='message error'>Erro ao cadastrar usuário: " . $stmt->error . "</div>";
+        //$mensagem = "<div class='message error'>Erro ao cadastrar usuário: " . $stmt->error . "</div>";
+        echo "<script>
+        alert('Ocorreu um erro ao cadastrar o usuário. Por favor, tente novamente.');
+           window.location.href='login_usuario.php';
+       </script>";
     }
 // Fechando a conexão com o banco de dados
 
