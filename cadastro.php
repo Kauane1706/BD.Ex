@@ -33,6 +33,16 @@ include 'conexao.php';
     } else {
         echo "Erro na preparação da consulta: " . $mysqli->error;
     }
+
+    if ($stmt->execute()) {
+        //$mensagem= <div class= "message sucess">Usuário cadastrado com sucesso!</div>;
+        echo "script>
+         alert('Usuario cadastrado com sucesso!');
+            window.location.href='login_usuario.php';
+        </script>";
+    } else{
+        $mensagem = "<div class='message error'>Erro ao cadastrar usuário: " . $stmt->error . "</div>";
+    }
 // Fechando a conexão com o banco de dados
 
     $mysqli->close();
